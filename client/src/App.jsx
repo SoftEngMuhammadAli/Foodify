@@ -1,45 +1,16 @@
 import React from "react";
+import Offers from "./components/app/offers";
+import NewsLetter from "./components/app/newsletter";
+import MapLocation from "./components/app/MapLocation";
+import ContactUs from "./components/app/ContactUs";
+import NavHeader from "./components/common/NavHeader";
 
 function App() {
   return (
     <>
+      <NavHeader />
+      {/* <NavHeader /> */}
       <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
-        {/* Navigation */}
-        <nav className="bg-white/80 backdrop-blur-md shadow-sm p-4 sticky top-0 z-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-200">
-                <span className="text-white font-black text-xl">F</span>
-              </div>
-              <h1 className="text-2xl font-black text-gray-900 tracking-tighter">
-                FOODIFY<span className="text-orange-600">.</span>
-              </h1>
-            </div>
-            <div className="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500">
-              <a href="#" className="hover:text-orange-600 transition-colors">
-                Home
-              </a>
-              <a href="#" className="hover:text-orange-600 transition-colors">
-                Restaurants
-              </a>
-              <a href="#" className="hover:text-orange-600 transition-colors">
-                Offers
-              </a>
-              <a href="#" className="hover:text-orange-600 transition-colors">
-                Contact
-              </a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="text-gray-600 font-bold hover:text-orange-600">
-                Login
-              </button>
-              <button className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <header className="relative overflow-hidden bg-white pt-16 pb-32 px-4">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-5 pointer-events-none">
@@ -216,6 +187,18 @@ function App() {
             ))}
           </div>
         </main>
+
+        {/* Offers */}
+        <Offers />
+
+        {/* NewsLetter */}
+        <NewsLetter />
+
+        {/* Map Location */}
+        <MapLocation />
+
+        {/* ContactUs */}
+        <ContactUs />
 
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-20 px-4">
