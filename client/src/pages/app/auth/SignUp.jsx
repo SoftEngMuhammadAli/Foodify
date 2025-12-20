@@ -124,7 +124,7 @@ const SignUpPage = () => {
           <p className="text-center text-sm text-gray-500 mt-6">
             Already have an account?{" "}
             <span className="text-orange-600 font-bold cursor-pointer hover:underline">
-              Login
+              <a href="/login">Login</a>
             </span>
           </p>
         </div>

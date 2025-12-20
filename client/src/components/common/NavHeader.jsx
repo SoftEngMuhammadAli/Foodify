@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     // Navigattion Header
@@ -36,10 +39,18 @@ const NavHeader = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="text-gray-600 font-bold hover:text-orange-600">
+            <button
+              onClick={() => navigate("/login")}
+              className="text-gray-600 font-bold hover:text-orange-600"
+            >
               Login
             </button>
-            <button className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">
+            <button
+              onClick={() => {
+                navigate("/register");
+              }}
+              className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200"
+            >
               Sign Up
             </button>
           </div>
@@ -106,10 +117,16 @@ const NavHeader = () => {
               Contact
             </a>
             <div className="mt-2 flex flex-col gap-2 px-3">
-              <button className="w-full bg-orange-600 text-white py-2 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">
+              <button
+                onClick={() => navigate("/login")}
+                className="w-full bg-orange-600 text-white py-2 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200"
+              >
                 Login
               </button>
-              <button className="w-full bg-orange-600 text-white py-2 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">
+              <button
+                onClick={() => navigate("/register")}
+                className="w-full bg-orange-600 text-white py-2 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200"
+              >
                 Sign Up
               </button>
             </div>
