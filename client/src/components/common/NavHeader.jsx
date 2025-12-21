@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,18 +23,34 @@ const NavHeader = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500">
-            <a href="#" className="hover:text-orange-600 transition-colors">
+            <Link
+              href="#"
+              to="/"
+              className="hover:text-orange-600 transition-colors"
+            >
               Home
-            </a>
-            <a href="#" className="hover:text-orange-600 transition-colors">
+            </Link>
+            <Link
+              href="#"
+              to="/restaurants"
+              className="hover:text-orange-600 transition-colors"
+            >
               Restaurants
-            </a>
-            <a href="#" className="hover:text-orange-600 transition-colors">
+            </Link>
+            <Link
+              href="#"
+              to="/offers"
+              className="hover:text-orange-600 transition-colors"
+            >
               Offers
-            </a>
-            <a href="#" className="hover:text-orange-600 transition-colors">
+            </Link>
+            <Link
+              href="#"
+              to="/contact-us"
+              className="hover:text-orange-600 transition-colors"
+            >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Buttons */}
@@ -46,9 +62,7 @@ const NavHeader = () => {
               Login
             </button>
             <button
-              onClick={() => {
-                navigate("/register");
-              }}
+              onClick={() => navigate("/register")}
               className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200"
             >
               Sign Up
@@ -92,30 +106,34 @@ const NavHeader = () => {
       {isOpen && (
         <div className="md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 shadow-lg">
           <div className="px-2 pt-2 pb-4 space-y-1">
-            <a
+            <Link
               href="#"
+              to="/"
               className="block px-3 py-2 rounded-md text-base font-bold text-gray-700 hover:text-orange-600 hover:bg-gray-50 transition"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
+              to="/restaurants"
               className="block px-3 py-2 rounded-md text-base font-bold text-gray-700 hover:text-orange-600 hover:bg-gray-50 transition"
             >
               Restaurants
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
+              to="/offers"
               className="block px-3 py-2 rounded-md text-base font-bold text-gray-700 hover:text-orange-600 hover:bg-gray-50 transition"
             >
               Offers
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
+              to="/contact-us"
               className="block px-3 py-2 rounded-md text-base font-bold text-gray-700 hover:text-orange-600 hover:bg-gray-50 transition"
             >
               Contact
-            </a>
+            </Link>
             <div className="mt-2 flex flex-col gap-2 px-3">
               <button
                 onClick={() => navigate("/login")}

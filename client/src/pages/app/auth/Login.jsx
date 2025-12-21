@@ -38,7 +38,7 @@ const LoginPage = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="peer w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 ring-orange-500 focus:outline-none font-medium placeholder-transparent"
+                className="peer w-full px-4 py-3 rounded-xl border border-gray-200  focus:outline-none font-medium placeholder-transparent"
               />
               <label className="absolute left-4 -top-2.5 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">
                 Email
@@ -49,7 +49,7 @@ const LoginPage = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
-                className="peer w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 ring-orange-500 focus:outline-none font-medium placeholder-transparent"
+                className="peer w-full px-4 py-3 rounded-xl border border-gray-200  focus:outline-none font-medium placeholder-transparent"
               />
               <label className="absolute left-4 -top-2.5 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base transition-all">
                 Password
@@ -72,8 +72,8 @@ const LoginPage = () => {
           </form>
 
           {/* Social Login */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 hover:bg-gray-100 transition">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+            <button className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-gray-200 hover:bg-gray-100 transition">
               <img
                 src="https://www.svgrepo.com/show/355037/google.svg"
                 alt="Google"
@@ -81,13 +81,23 @@ const LoginPage = () => {
               />
               Google
             </button>
-            <button className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 hover:bg-gray-100 transition">
+
+            <button className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-gray-200 hover:bg-gray-100 transition">
               <img
-                src="https://www.svgrepo.com/show/303128/apple-logo.svg"
+                src="https://www.svgrepo.com/show/503173/apple-logo.svg"
                 alt="Apple"
                 className="w-5 h-5"
               />
               Apple
+            </button>
+
+            <button className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-gray-200 hover:bg-gray-100 transition">
+              <img
+                src="https://www.svgrepo.com/show/509923/facebook.svg"
+                alt="Facebook"
+                className="w-5 h-5"
+              />
+              Facebook
             </button>
           </div>
 
