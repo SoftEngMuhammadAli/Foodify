@@ -1,15 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import NavHeader from "../components/common/NavHeader";
-import Footer from "../components/common/Footer";
 
 const MainLayout = () => {
   return (
-    <>
+    <React.Fragment>
       <NavHeader />
       <Outlet />
-      <Footer />
-    </>
+    </React.Fragment>
   );
 };
 
