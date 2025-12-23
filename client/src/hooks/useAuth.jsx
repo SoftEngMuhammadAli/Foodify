@@ -2,25 +2,25 @@
 // useAuth Hook (Authentication Helper)
 // ===============================
 
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-// const useAuth = () => {
-//   // Get user data from Redux auth slice
-//   const { user } = useSelector((state) => state.auth);
+const useAuth = () => {
+  // Get user data from Redux auth slice
+  const { user } = useSelector((state) => state.auth);
 
-//   // Convert user existence into a boolean
-//   const isAuthenticated = !!user;
+  // Convert user existence into a boolean
+  const isAuthenticated = !!user;
 
-//   return {
-//     // True if user is logged in, otherwise false
-//     isAuthenticated,
+  return {
+    // True if user is logged in, otherwise false
+    isAuthenticated,
 
-//     // User role (e.g., "User" or "Admin")
-//     role: user?.role,
-//   };
-// };
+    // User role (e.g., "User" or "Admin")
+    role: user?.role,
+  };
+};
 
-// export default useAuth;
+export default useAuth;
 
 // ===============================
 // TODO: Authentication & Role-Based Routing
