@@ -1,6 +1,7 @@
 import User from "../models/auth.model.js";
 import { catchAsyncHandler } from "../middlewares/catchAsyncHandler.js";
 
+// =================== GET ALL USERS ===================
 export const getAllUsers = catchAsyncHandler(async (req, res) => {
   const users = await User.find({});
 
@@ -14,6 +15,7 @@ export const getAllUsers = catchAsyncHandler(async (req, res) => {
   });
 });
 
+// =================== CREATE NEW USER ===================
 export const createNewUser = catchAsyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -33,6 +35,7 @@ export const createNewUser = catchAsyncHandler(async (req, res) => {
   });
 });
 
+// =================== GET SINGLE USER ===================
 export const getSingleUser = catchAsyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -48,6 +51,7 @@ export const getSingleUser = catchAsyncHandler(async (req, res) => {
   });
 });
 
+// =================== UPDATE USER ===================
 export const updateUser = catchAsyncHandler(async (req, res) => {
   const { id } = req.params;
   const { name, email, password } = req.body;
@@ -64,6 +68,7 @@ export const updateUser = catchAsyncHandler(async (req, res) => {
   });
 });
 
+// =================== DELETE USER ===================
 export const deleteUser = catchAsyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -79,6 +84,7 @@ export const deleteUser = catchAsyncHandler(async (req, res) => {
   });
 });
 
+// =================== GET USER PROFILE ===================
 export const getUserProfile = catchAsyncHandler(async (req, res) => {
   const { id } = req.user;
 

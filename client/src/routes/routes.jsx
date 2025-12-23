@@ -4,9 +4,9 @@ import LoginPage from "../pages/app/auth/Login";
 import SignUpPage from "../pages/app/auth/SignUp";
 import RestaurantsPage from "../pages/app/restaurants";
 import MainLayout from "../layouts/MainLayout";
-import HomePage from "../pages/app/HomePage";
 import ContactUs from "../components/app/ContactUs";
 import Offers from "../components/app/offers";
+import HomePage from "../pages/app/main/HomePage";
 
 const AppRoutes = () => {
   return (

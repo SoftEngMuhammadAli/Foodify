@@ -11,6 +11,7 @@ import {
 
 const router = express.Router();
 
+// User Routes
 router.get("/", checkAuth, authorizeRoles("admin"), getAllUsers);
 
 router.post("/", checkAuth, authorizeRoles("admin"), createNewUser);

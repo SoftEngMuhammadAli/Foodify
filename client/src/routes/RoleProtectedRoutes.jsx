@@ -1,7 +1,7 @@
 import React from "react";
 
 const RoleProtectedRoutesWrapper = () => {
-  return <div>RoleProtectedRoutesWrapper</div>;
+  return <></>;
 };
 
 export default RoleProtectedRoutesWrapper;

@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/auth.model.js";
 
+// this is for authentication to check that user is logged in or not
 export const checkAuth = async (req, res, next) => {
   const authHeader = req.headers.authorization;
 
@@ -25,6 +26,7 @@ export const checkAuth = async (req, res, next) => {
   }
 };
 
+// this is for authorization to check that user has access to the route or not
 export const authorizeRoles = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {

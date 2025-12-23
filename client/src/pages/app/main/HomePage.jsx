@@ -1,10 +1,10 @@
 import React from "react";
-import Offers from "../../components/app/offers";
-import NewsLetter from "../../components/app/newsletter";
-import MapLocation from "../../components/app/MapLocation";
-import ContactUs from "../../components/app/ContactUs";
-import Footer from "../../components/common/Footer";
-import BenefitsView from "../../components/app/Benefits";
+import Offers from "../../../components/app/offers";
+import NewsLetter from "../../../components/app/newsletter";
+import MapLocation from "../../../components/app/MapLocation";
+import ContactUs from "../../../components/app/ContactUs";
+import Footer from "../../../components/common/Footer";
+import BenefitsView from "../../../components/app/Benefits";
 
 const HomePage = () => {
   return (

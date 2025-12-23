@@ -1,41 +1,5 @@
 import React from "react";
-
-const benefitsData = [
-  {
-    icon: "🚀",
-    title: "Fast Delivery",
-    description:
-      "Get your food delivered to your door in record time, hot and fresh.",
-  },
-  {
-    icon: "🥗",
-    title: "Healthy Options",
-    description:
-      "Choose from a wide variety of healthy meals and fresh salads.",
-  },
-  {
-    icon: "💰",
-    title: "Best Prices",
-    description:
-      "Enjoy premium food without breaking your wallet, always affordable.",
-  },
-  {
-    icon: "🎁",
-    title: "Exclusive Offers",
-    description:
-      "Access weekly discounts and special deals available only for our users.",
-  },
-  {
-    icon: "⭐",
-    title: "Top Restaurants",
-    description: "We partner only with top-rated restaurants in your city.",
-  },
-  {
-    icon: "📱",
-    title: "Easy Ordering",
-    description: "Order from your phone with a simple, intuitive interface.",
-  },
-];
+import { benefitsData } from "../../utils";
 
 const BenefitsView = () => {
   return (

@@ -1,78 +1,5 @@
 import React, { useState } from "react";
-
-const restaurants = [
-  {
-    id: 1,
-    name: "Burger Palace",
-    cuisine: "Burgers • Fast Food",
-    rating: 4.8,
-    image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800",
-  },
-  {
-    id: 2,
-    name: "Pizza Hub",
-    cuisine: "Pizza • Italian",
-    rating: 4.6,
-    image: "https://images.unsplash.com/photo-1548365328-9f547fb0958a?w=800",
-  },
-  {
-    id: 3,
-    name: "Sushi World",
-    cuisine: "Sushi • Japanese",
-    rating: 4.9,
-    image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800",
-  },
-  {
-    id: 4,
-    name: "Taco Fiesta",
-    cuisine: "Mexican • Tacos",
-    rating: 4.7,
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800",
-  },
-  {
-    id: 5,
-    name: "Pasta House",
-    cuisine: "Italian • Pasta",
-    rating: 4.5,
-    image: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=800",
-  },
-  {
-    id: 6,
-    name: "Green Garden",
-    cuisine: "Salads • Healthy",
-    rating: 4.4,
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
-  },
-  {
-    id: 7,
-    name: "Steak Grill",
-    cuisine: "Steakhouse • BBQ",
-    rating: 4.8,
-    image: "https://images.unsplash.com/photo-1546241072-48010ad28c2c?w=800",
-  },
-  {
-    id: 8,
-    name: "Dim Sum Delight",
-    cuisine: "Chinese • Dim Sum",
-    rating: 4.7,
-    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800",
-  },
-  {
-    id: 9,
-    name: "Curry Corner",
-    cuisine: "Indian • Curry",
-    rating: 4.6,
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
-  },
-  {
-    id: 10,
-    name: "Dessert Heaven",
-    cuisine: "Sweets • Desserts",
-    rating: 4.9,
-    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800",
-  },
-];
-const categories = ["All", "Burgers", "Pizza", "Sushi", "Indian"];
+import { restaurants, categoriesForRestaurants } from "../../../utils/index";
 
 const RestaurantsPage = () => {
   const [search, setSearch] = useState("");
@@ -122,7 +49,7 @@ const RestaurantsPage = () => {
 
         {/* CATEGORIES */}
         <div className="flex gap-3 overflow-x-auto mb-12 pb-2">
-          {categories.map((cat) => (
+          {categoriesForRestaurants.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}

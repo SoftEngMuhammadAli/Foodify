@@ -1,78 +1,8 @@
 import React, { useState } from "react";
+import { offers, offersCategories } from "../../utils";
 
 const Offers = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-
-  const categories = ["All", "Pizza", "Burgers", "Fast Food", "Healthy"];
-
-  const offers = [
-    {
-      id: 1,
-      title: "50% OFF",
-      subtitle: "On your first order",
-      code: "WELCOME50",
-      category: "Fast Food",
-      tag: "LIMITED",
-      color: "from-orange-500 to-red-500",
-      image:
-        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: 2,
-      title: "FREE DELIVERY",
-      subtitle: "Orders above $20",
-      code: "FREEDEL",
-      category: "All",
-      tag: "HOT",
-      color: "from-red-500 to-pink-500",
-      image:
-        "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: 3,
-      title: "BUY 1 GET 1",
-      subtitle: "On all Pizzas",
-      code: "BOGOPIZZA",
-      category: "Pizza",
-      tag: "POPULAR",
-      color: "from-yellow-400 to-orange-500",
-      image:
-        "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: 4,
-      title: "25% OFF",
-      subtitle: "Healthy meals",
-      code: "FIT25",
-      category: "Healthy",
-      tag: "NEW",
-      color: "from-green-400 to-emerald-600",
-      image:
-        "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: 5,
-      title: "FLAT $10 OFF",
-      subtitle: "Burger combos",
-      code: "BURGER10",
-      category: "Burgers",
-      tag: "STEAL",
-      color: "from-purple-500 to-indigo-600",
-      image:
-        "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600",
-    },
-    {
-      id: 6,
-      title: "20% OFF",
-      subtitle: "Late night cravings",
-      code: "NIGHT20",
-      category: "Fast Food",
-      tag: "NIGHT",
-      color: "from-gray-800 to-black",
-      image:
-        "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&q=80&w=600",
-    },
-  ];
 
   const filteredOffers =
     activeCategory === "All"
@@ -117,7 +47,7 @@ const Offers = () => {
 
         {/* Categories */}
         <div className="flex flex-wrap justify-center gap-4 mb-14">
-          {categories.map((cat) => (
+          {offersCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}

@@ -1,64 +1,8 @@
 import React from "react";
 import { FaHome, FaUtensils, FaUsers, FaCog } from "react-icons/fa";
+import { adminDashboardOrders, adminDashboardStats } from "../../utils";
 
 export const AdminDashboard = () => {
-  const statsData = [
-    {
-      label: "Total Revenue",
-      value: "$12,845.50",
-      icon: <FaUtensils />,
-      highlight: false,
-    },
-    {
-      label: "Total Orders",
-      value: "1,240",
-      icon: <FaHome />,
-      highlight: false,
-    },
-    {
-      label: "Active Users",
-      value: "842",
-      icon: <FaUsers />,
-      highlight: false,
-    },
-    { label: "Pending Orders", value: "15", icon: <FaCog />, highlight: true },
-  ];
-
-  const orders = [
-    {
-      id: "#ORD-7421",
-      customer: "John Doe",
-      status: "Completed",
-      amount: "$42.50",
-      date: "2025-12-22",
-      method: "Card",
-    },
-    {
-      id: "#ORD-7422",
-      customer: "Jane Smith",
-      status: "Pending",
-      amount: "$28.90",
-      date: "2025-12-22",
-      method: "Cash",
-    },
-    {
-      id: "#ORD-7423",
-      customer: "Mike Ross",
-      status: "Cancelled",
-      amount: "$15.00",
-      date: "2025-12-21",
-      method: "Card",
-    },
-    {
-      id: "#ORD-7424",
-      customer: "Rachel Zane",
-      status: "Completed",
-      amount: "$64.75",
-      date: "2025-12-21",
-      method: "PayPal",
-    },
-  ];
-
   const statusColor = (status) => {
     switch (status) {
       case "Completed":
@@ -121,7 +65,7 @@ export const AdminDashboard = () => {
         <main className="flex-1 overflow-y-auto p-4 md:p-8 space-y-8">
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {statsData.map((stat) => (
+            {adminDashboardStats.map((stat) => (
               <div
                 key={stat.label}
                 className={`p-5 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4 hover:shadow-lg transition ${
@@ -167,7 +111,7 @@ export const AdminDashboard = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {orders.map((order) => (
+                  {adminDashboardOrders.map((order) => (
                     <tr
                       key={order.id}
                       className="hover:bg-orange-50 transition"
